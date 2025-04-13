@@ -8,9 +8,16 @@ function [M, remainedColIdx, remainedRowIdx, pmd] = dvtime( M, thrd )
 % -Mc: removed cols are stored
 %
 % Haipeng
-% Created: 8/14/2023
+% 6/13/2020
+% 6/27/2020 
+% 7/5/2020 input is from 4.64km datasets
+% 7/16/2020 revision for GSM datasets
+% 4/29/2021 
+% 2/10/2023 Remove outputs Mr and Mc
+% 5/25/2023 Fix line 49: change size(M, 2) to size(M, 1)
 
 M = single( M );
+% Mr = zeros( size( M, 1 ), 1, 'logical' );  % variable to mark removed rows
 
 remainedColIdx = zeros( size( M, 2 ), 1, 'logical' ); % zero represents the column removed from data matrix for no enough data through a year
 remainedRowIdx = zeros( size( M, 1 ), 1, 'logical' ); % zero represents the row removed from data matrix for no enough data through a year
@@ -21,7 +28,7 @@ t = 0;
 % comprises of pixels located in land and perennial sea-ice covered region
 for k = 1 : size( M, 1 )
     bin_ts = M(k, :);
-    if nnz( bin_ts ) < 2 % Pixels was identified as  land or perenial ice cover
+    if nnz( bin_ts ) < 2 % Pixels was identified as  land or perenial ice cover NOTE: here may need adjustment based ond input
 %         Mr(k) = 1; do nothing
     elseif nnz( bin_ts ) / size( M, 2 ) < thrd % No enough points in the row
 %         Mr(k) = 1; do nothing
@@ -34,6 +41,7 @@ end
 M = T(1 : t, :);
 
 % Discard column where the percent of valid measurement < thrd
+% Mc = zeros( size( M, 2 ), 1, 'logical' );
 T = zeros( size( M ), 'single' );
 t = 0;
 for k = 1 : size( M, 2 )
