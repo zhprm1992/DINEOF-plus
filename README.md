@@ -4,7 +4,7 @@ This is an upgraded version of Data Interpolation Empirical Orthogonal Function 
 
 ## Usage
 
-You can direnctly run the function DINEOFplus in MATLAB environment.
+You can directly run the function DINEOFplus in MATLAB environment.
 
 ## Citation
 
