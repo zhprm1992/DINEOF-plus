@@ -10,7 +10,7 @@ You can directly run the function DINEOFplus in MATLAB environment.
 
 If you use this code in your research, please cite it as follows:
 
-Zhao, H., Matsuoka, A., Manizza, M., & Winter, A. (2024). DINEOF Interpolation of Global Ocean Color Data: Error Analysis and Masking. https://doi.org/10.31223/X58T2X 
+Zhao, H., A. Matsuoka, M. Manizza, and A. Winter, 2024: DINEOF Interpolation of Global Ocean Color Data: Error Analysis and Masking. J. Atmos. Oceanic Technol., 41, 953–968, https://doi.org/10.1175/JTECH-D-23-0105.1.
 
 ## Contact
 
