@@ -7,7 +7,7 @@ function  [Xr, rms, error_var]  = DINEOFplus( Xo, d1, d2, ind, thrd, logFlag )
 % - d1: length of longitude vector
 % - d2: length of latitude vector 
 % - ind: the linear indices corresponding to the row and column subscripts
-%        in row and color for matrix of size (lon * lat)
+%        in row and column for matrix of size (lon * lat)
 % - thrd: minimum percentage of missing data in each column and row
 % - logFlag: 0 indicates no log transform, 1 indicates use of log transform
 % Outputs:
