@@ -14,7 +14,7 @@ Zhao, H., A. Matsuoka, M. Manizza, and A. Winter, 2024: DINEOF Interpolation of 
 
 ## Contact
 
-For any questions or concerns, please contact:
+For any questions, please contact:
 
 - Name: Haipeng Zhao
 - Email: hzhao1992rm@gmail.com
